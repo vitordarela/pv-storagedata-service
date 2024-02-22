@@ -1,6 +1,6 @@
 # pv-storagedata-service
 
-The `pv-storagedata-service` is a gRPC service developed for logging storage of data captured through the `pv-pixel-service`. This service provides an efficient and scalable solution for managing and storing data from the pixel capture service.
+The `pv-storagedata-service` is a gRPC service developed for logging storage of data captured through the [pv-pixel-service](https://github.com/vitordarela/pv-pixel-service). This service provides an efficient and scalable solution for managing and storing data from the pixel capture service.
 
 ## Installation
 
