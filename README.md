@@ -27,4 +27,10 @@ Ensure you have [.NET Core 8](https://dotnet.microsoft.com/download/dotnet/8.0) 
 
 The `pv-storagedata-service` offers a gRPC interface for interaction with the `pv-pixel-service`. Ensure the `pv-pixel-service` is running before using this service.
 
-Example code on how to use the service via gRPC in a .NET application:
+To consume the service, check and extract the `.proto` file located here: [Storage.Proto](https://github.com/vitordarela/pv-storagedata-service/blob/master/Presentation.Api/Protos/storage.proto)
+
+## Result Task
+
+During the runtime processing, the result of the call is recorded in a log file, which is by default specified in the `appsettings.json` under the `FilePath` property with the default value pointing to this directory `/tmp/visits.log`.
+
+Please note that at the root of the project, there is an example of how the result is stored: [visits.log](https://github.com/vitordarela/pv-storagedata-service/blob/master/tmp/visits.log)
