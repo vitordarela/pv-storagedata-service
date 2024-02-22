@@ -6,10 +6,10 @@
 
     public class StorageService : Storage.StorageBase
     {
-        private readonly IContentService contentService;
+        private readonly IContentFileService contentService;
         private readonly ILogger<StorageService> logger;
 
-        public StorageService(ILogger<StorageService> logger, IContentService contentService)
+        public StorageService(ILogger<StorageService> logger, IContentFileService contentService)
         {
             this.logger = logger;
             this.contentService = contentService;
@@ -32,7 +32,7 @@
 
                 return Task.FromResult(new DataResponse
                 {
-                    Message = "Success! Data Save"
+                    Message = "Success! Data Saved"
                 });
 
             }

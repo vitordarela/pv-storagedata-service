@@ -1,6 +1,6 @@
 ﻿namespace PvStorageService.Application.Services
 {
-    public interface IContentService
+    public interface IContentFileService
     {
         public void SaveContent(string content);
     }

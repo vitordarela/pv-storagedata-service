@@ -3,12 +3,12 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;
 
-    public class ContentService : IContentService
+    public class ContentFileService : IContentFileService
     {
         private readonly IConfiguration configuration;
-        private readonly ILogger<ContentService> logger;
+        private readonly ILogger<ContentFileService> logger;
 
-        public ContentService(IConfiguration configuration, ILogger<ContentService> logger)
+        public ContentFileService(IConfiguration configuration, ILogger<ContentFileService> logger)
         {
             this.configuration = configuration;
             this.logger = logger;

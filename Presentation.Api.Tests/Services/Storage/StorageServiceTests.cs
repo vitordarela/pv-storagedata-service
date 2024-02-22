@@ -15,7 +15,7 @@ namespace Presentation.Api.Tests.Services.Storage
         {
             // Arrange
             var loggerMock = new Mock<ILogger<StorageService>>();
-            var contentServiceMock = new Mock<IContentService>();
+            var contentServiceMock = new Mock<IContentFileService>();
 
             var storageService = new StorageService(loggerMock.Object, contentServiceMock.Object);
 
@@ -41,7 +41,7 @@ namespace Presentation.Api.Tests.Services.Storage
         {
             // Arrange
             var loggerMock = new Mock<ILogger<StorageService>>();
-            var contentServiceMock = new Mock<IContentService>();
+            var contentServiceMock = new Mock<IContentFileService>();
 
             var storageService = new StorageService(loggerMock.Object, contentServiceMock.Object);
 

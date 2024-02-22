@@ -6,7 +6,7 @@
     using PvStorageService.Application.Services;
     using Xunit;
 
-    public class ContentServiceTests
+    public class ContentFileServiceTest
     {
         [Fact]
         public void SaveContent_Success()
@@ -15,8 +15,8 @@
             var configurationMock = new Mock<IConfiguration>();
             configurationMock.Setup(config => config["FilePath"]).Returns("C:/somedirectory/testfile.txt");
 
-            var loggerMock = new Mock<ILogger<ContentService>>();
-            var contentService = new ContentService(configurationMock.Object, loggerMock.Object);
+            var loggerMock = new Mock<ILogger<ContentFileService>>();
+            var contentService = new ContentFileService(configurationMock.Object, loggerMock.Object);
 
             // Act
             contentService.SaveContent("Test content");
@@ -33,8 +33,8 @@
             var configurationMock = new Mock<IConfiguration>();
             configurationMock.Setup(config => config["FilePath"]).Returns("");
 
-            var loggerMock = new Mock<ILogger<ContentService>>();
-            var contentService = new ContentService(configurationMock.Object, loggerMock.Object);
+            var loggerMock = new Mock<ILogger<ContentFileService>>();
+            var contentService = new ContentFileService(configurationMock.Object, loggerMock.Object);
 
             // Act & Assert
             Assert.Throws<ArgumentNullException>(() => contentService.SaveContent("Test content with exception"));
